@@ -1,0 +1,30 @@
+:root {
+  --primary-color: skyblue;
+  --page-header-background-color: rgb(164, 104, 219);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  background-color: var(--primary-color);
+}
+/* Styling the header */
+.page-header {
+  background-color: var(--page-header-background-color);
+  height: 85px;
+}
+/* styling the logo */
+.logo {
+  max-width: fit-content;
+  /* width: 170px; */
+}
+/* styling the main section of my page */
+.headline {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  /* margin-top: 5px; */
+}
