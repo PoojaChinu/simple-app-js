@@ -14,7 +14,9 @@ body {
 /* Styling the header */
 .page-header {
   background-color: var(--page-header-background-color);
-  height: 85px;
+  /* max-width: max-content; */
+  height: 100px;
+  display: flex;
 }
 /* styling the logo */
 .logo {
@@ -25,6 +27,46 @@ body {
 .headline {
   font-size: 20px;
   font-weight: 500;
+  max-width: 950px;
   text-align: center;
-  /* margin-top: 5px; */
+  justify-content: center;
+  width: 100%;
+  /* border: 1px solid green; */
+}
+
+/* Styling for button */
+.button-class {
+  background-color: green;
+  border: none;
+  color: white;
+  margin: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+/* styling for pokemon list */
+.pokemon-list {
+  padding: 0;
+  /* max-width: 750px; */
+  display: flex;
+  list-style: none;
+  /* width: max-content; */
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-items: center;
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  page-header {
+    max-width: max-content;
+  }
+  headline {
+    text-align: center;
+  }
+  button-class {
+    font-size: 10px;
+  }
 }
