@@ -26,19 +26,20 @@ let pokemonRepository = (function () {
 
   // creating new function addListItem() within IIFE
   function addListItem(pokemon) {
-    let pokemonList = document.querySelector(".pokemon-list");
-    let listpokemon = document.createElement("li");
+    let pokemonList = document.querySelector("#pokemon-list");
+    let listPokemon = document.createElement("li");
+
     let button = document.createElement("button");
+    button.innerText = pokemon.name.toUpperCase();
+    button.classList.add("button-class");
 
     // adding an event Listner to the button
     button.addEventListener("click", function showDetails() {
       console.log(pokemon);
     });
 
-    button.innerText = pokemon.name;
-    button.classList.add("button-class");
-    listpokemon.appendChild(button);
-    pokemonList.appendChild(listpokemon);
+    listPokemon.appendChild(button);
+    pokemonList.appendChild(listPokemon);
   }
   return {
     add: add,

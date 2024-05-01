@@ -4,22 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple JS App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
     <!-- Here is the header of the website -->
     <header class="page-header">
       <img src="./img/PokedoxLogo.png" class="logo" alt="logo" width="170" />
+      <nav class="main-navigation">
+        <ul class="navigation-list">
+          <li role="presentation">
+            <i class="fa fa-fw fa-home"></i>
+            <a
+              href="./index.html"
+              role="menuitem"
+              class="navigation-list_item navigation-list_item--active"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <i class="fa fa-fw fa-info"></i>
+            <a href="./about.html" role="menuitem" class="navigation-list_item"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
-    <!-- Here is the main section of the website -->
-    <div class="headline">
-      <h1>Pokemons</h1>
-      <ul class="pokemon-list"></ul>
-    </div>
+    <main>
+      <!-- Here is the main section of the website -->
+      <div class="headline">
+        <h1>Pokemons</h1>
+      </div>
+      <div class="main-content">
+        <ul id="pokemon-list" class="pokemon-list" role="list"></ul>
+      </div>
+    </main>
     <script src="./js/script.js"></script>
     <script src="./js/tota11ymin.js"></script>
   </body>

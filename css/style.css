@@ -1,72 +1,121 @@
 :root {
-  --primary-color: skyblue;
-  --page-header-background-color: rgb(164, 104, 219);
+  --primary-color: rgb(125, 206, 125);
+  --secondary-color: rgb(203, 111, 183);
+  --page-header-background-color: rgb(190, 70, 164);
 }
 
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  background-color: var(--primary-color);
+  background-color: rgb(226, 226, 226);
 }
+
 /* Styling the header */
 .page-header {
   background-color: var(--page-header-background-color);
-  /* max-width: max-content; */
   height: 100px;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
 }
+
 /* styling the logo */
 .logo {
   max-width: fit-content;
-  /* width: 170px; */
 }
+
 /* styling the main section of my page */
 .headline {
   font-size: 20px;
   font-weight: 500;
-  max-width: 950px;
   text-align: center;
   justify-content: center;
   width: 100%;
-  /* border: 1px solid green; */
+}
+
+.main-content {
+  width: auto;
 }
 
 /* Styling for button */
 .button-class {
-  background-color: green;
-  border: none;
+  background: linear-gradient(
+    to right,
+    rgb(125, 206, 125) 0%,
+    rgb(125, 206, 125) 50%,
+    rgb(203, 111, 183) 0%,
+    rgb(203, 111, 183) 50%
+  );
   color: white;
   margin: 10px;
-  padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
-  display: block;
   font-size: 16px;
+  width: 150px;
+  height: 150px;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+main {
+  padding: 10px;
+  width: 100%;
+  min-width: 250px;
+  /* background-color: darkorange; */
+}
+
+/* Styling for Navigation item */
+.main-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-right: 50px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.navigation-list_item {
+  padding-right: 15px;
+  color: white;
+  text-decoration: none;
+  width: 0.5rem;
+  overflow: auto;
+}
+
+.navigation-list_item--active {
+  color: rgb(125, 206, 125);
+}
+
+/* Styling about page */
+.about-pokemon {
+  text-align: center;
+}
+
+.content {
+  font-size: 25px;
+  margin-left: 0px;
+  margin-right: 50px;
 }
 
 /* styling for pokemon list */
 .pokemon-list {
-  padding: 0;
-  /* max-width: 750px; */
+  padding: 10px;
   display: flex;
-  list-style: none;
-  /* width: max-content; */
-  margin-left: 50px;
-  margin-right: 50px;
-  justify-items: center;
-}
-
-@media all and (min-width: 500px) and (max-width: 750px) {
-  page-header {
-    max-width: max-content;
-  }
-  headline {
-    text-align: center;
-  }
-  button-class {
-    font-size: 10px;
-  }
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  min-width: 250px;
+  width: auto;
+  height: auto;
+  margin: 10px;
+  list-style-type: none;
 }
