@@ -24,8 +24,8 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
 
     // adding an event Listner to the button
-    button.addEventListener("click", function showDetails() {
-      console.log(pokemon);
+    button.addEventListener("click", function () {
+      showDetails(pokemon);
     });
 
     listPokemon.appendChild(button);
@@ -51,6 +51,8 @@ let pokemonRepository = (function () {
             };
             add(pokemon);
           });
+
+          console.log(pokemonList);
         })
         .catch(function (e) {
           console.error(e);
@@ -78,7 +80,7 @@ let pokemonRepository = (function () {
 
   // loading the pokemon details from API instead of static data
   function showDetails(pokemon) {
-    pokemonRepository.loadDetails(pokemon).then(function () {
+    loadDetails(pokemon).then(function () {
       console.log(pokemon);
     });
   }
@@ -105,6 +107,5 @@ pokemonRepository.loadList().then(function () {
   // using ForEach to iterate over each item
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
-    pokemonRepository.showDetails(pokemon);
   });
 });
