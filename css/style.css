@@ -1,7 +1,7 @@
 :root {
-  --primary-color: rgb(75, 202, 75);
-  --secondary-color: rgb(132, 30, 110);
-  --page-header-background-color: rgb(190, 70, 164);
+  --primary-color: rgb(123, 171, 123);
+  --secondary-color: rgb(119, 147, 203);
+  --page-header-background-color: rgb(76, 136, 160);
 }
 
 * {
@@ -45,10 +45,10 @@ body {
 .button-class {
   background: linear-gradient(
     to right,
-    rgb(251, 255, 251) 0%,
-    rgb(207, 212, 207) 50%,
-    rgb(190, 70, 164) 0%,
-    rgb(210, 101, 186) 50%
+    rgb(181, 224, 181) 0%,
+    rgb(123, 171, 123) 50%,
+    rgb(110, 169, 211) 0%,
+    rgb(119, 147, 203) 50%
   );
   color: #fbfffb;
   margin: 10px;
@@ -118,4 +118,25 @@ main {
   height: auto;
   margin: 10px;
   list-style-type: none;
+}
+
+.modal-body {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.modal-body p {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.modal-body img {
+  width: 200px;
+  height: 200px;
 }

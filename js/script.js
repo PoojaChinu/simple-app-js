@@ -24,6 +24,7 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     button.classList.add("btn");
     button.setAttribute("data-toggle", "modal");
+    button.setAttribute("data-target", "#pokemonModal");
 
     // adding an event Listner to the button
     button.addEventListener("click", function () {
@@ -45,7 +46,6 @@ let pokemonRepository = (function () {
           return response.json();
         })
         .then(function (json) {
-          // console.log(json.results);
           // take this json and run a For Each Loop on this
           json.results.forEach(function (item) {
             let pokemon = {
@@ -54,8 +54,6 @@ let pokemonRepository = (function () {
             };
             add(pokemon);
           });
-
-          // console.log(pokemonList);
         })
         .catch(function (e) {
           console.error(e);
@@ -74,7 +72,7 @@ let pokemonRepository = (function () {
         // Now we add the details to the item
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
-        item.types = details.types;
+        item.types = details.types[0].type.name;
       })
       .catch(function (e) {
         console.error(e);
@@ -90,32 +88,29 @@ let pokemonRepository = (function () {
   }
   //Shows the modal for Pokemon
   function showModal(item) {
-    console.log("start of show model", item);
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
-    // let modalHeader = $(".modal-header");
 
     modalTitle.empty();
     modalBody.empty();
 
     // creating element for the name in modal content
-    let nameElement = $("<h1>" + item.name + "</h1>");
+    let nameElement = $("<h1>" + item.name.toUpperCase() + "</h1>");
 
     // creating image in the modal content
-    let imgElement = $('<img class= "modal-img" style="width:50%">');
+    let imgElement = $('<img class= "modal-img" style="width:40%">');
     imgElement.attr("src", item.imageUrl);
 
     // creating element for the height
     let heightElement = $("<p>" + "Height: " + item.height + "</p>");
 
     //creating elements for types in modal content
-    let typesElement = $("<p>" + "Types: " + item.types + "</p>");
+    let typesElement = $("<p>" + "Type: " + item.types + "</p>");
 
     modalTitle.append(nameElement);
     modalBody.append(imgElement);
     modalBody.append(heightElement);
     modalBody.append(typesElement);
-    console.log("End of show model");
   }
 
   return {

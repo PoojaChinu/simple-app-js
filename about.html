@@ -2,23 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- MetaTag viewport for Responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwsome CSS -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
+    <!-- Icon Library -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
     <title>About Pokemon</title>
   </head>
   <body>
     <!-- Here is the header of the website -->
     <header class="page-header">
       <img src="./img/PokedoxLogo.png" class="logo" alt="logo" width="170" />
-      <!-- Navigation Bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button
           class="navbar-toggler"
@@ -38,10 +48,11 @@
                 ><i class="fa fa-fw fa-home"></i> Home
               </a>
             </li>
-            <li class="nav-item">
-              <a href="./about.html" class="nav-link active">
-                <i class="fa fa-fw fa-info"></i> About
-                <span class="sr-only">(current)</span></a
+            <li class="nav-item active">
+              <a href="./about.html" class="nav-link">
+                <i class="fa fa-fw fa-info"></i> About<span class="sr-only"
+                  >(current)</span
+                ></a
               >
             </li>
           </ul>
@@ -67,7 +78,9 @@
         International
       </p>
     </main>
+    <!-- Tota11y MinJS File -->
     <script src="./js/tota11ymin.js"></script>
+    <!-- PolyFill JS File -->
     <script src="./js/promise-polyfill.js"></script>
     <script src="./js/fetch-polyfill.js"></script>
   </body>
