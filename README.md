@@ -17,6 +17,10 @@ This project is a simple web application that displays a list of Pokémon fetche
 
 ## Getting Started
 
+## Live Demo
+
+You can view the live demo of the Pokémon at: [SIMPLE-APP-JS Live Demo](https://poojachinu.github.io/simple-app-js/)
+
 ## Running Locally
 
 To run this project locally, follow these steps:
